@@ -1,0 +1,14 @@
+PRINT "Enter two names:"
+INPUT name_1
+INPUT name2
+PRINT "Now enter their ages respectively:"
+INPUT age1
+INPUT age2
+PRINT "The ages will now be swapped"
+SET temp = age1
+SET age1 = age2
+SET age2 = temp
+SET list1 = [name_1, age1]
+SET list2 = [name2, age2]
+PRINT list1
+PRINT list2

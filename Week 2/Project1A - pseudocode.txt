@@ -1,0 +1,35 @@
+BEGIN
+INPUT no of item
+SET cart = 0
+FOR x in =no of item
+    INPUT item no
+    INPUT item price
+    cart_total = item no * item price
+    cart = cart + cart_total
+MATCH item name to item price
+PRINT cart
+INPUT payment method
+PRINT "Cash or Card"
+IF payment method = "Cash" THEN
+    PRINT "Enter amount"
+    INPUT cash_received
+    IF cash_recieved >= cart_total THEN
+        change = cash_recieved - cart
+        PRINT change
+        PRINT "payment successful"
+    ELSE
+        PRINT "PAYMENT UNSUCCESSFUL"
+    END IF
+ELSE IF payment method = "card"
+    PRINT "Enter amount"
+    INPUT cash_received
+    IF cash_received >= cart_total THEN
+        PRINT "payment successful"
+    ELSE
+        PRINT "PAYMENT UNSUCCESSFUL"
+    END IF
+END IF
+FOR receipt in =no of item
+    PRINT item name
+    PRINT item price
+END
